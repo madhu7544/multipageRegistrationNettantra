@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <img src="https://res.cloudinary.com/dsiyffj0o/image/upload/v1674734760/nettantraImage_hfsuzl.png" class="logo" />
+            <h1 class="heading">Multi-page Registration Form</h1><br />
+        </div>
+        <div class="display" id="page-1">
+            <h3 class="page-head">Registration Form</h3>
+            <form onsubmit="validatin()">
+                <div class="user-content">
+                    <label for="name">Name<span> *</span></label><br>
+                    <input type="text" id="name" name="name" placeholder="First Name" />
+                    <input type="text" id="lastname" name="lastname" placeholder="Last Name" /><br />
+                    <span id="first"></span>
+                </div>
+                <div class="user-content">
+                    <label for="date">Date of Birth<span> *</span></label><br>
+                    <input type="date" id="date" name="date" /><br />
+                    <span id="dateError"></span>
+                </div>
+                <div class="user-content">
+                    <label for="email">Email<span> *</span></label><br>
+                    <input type="text" id="email" name="email" placeholder="Email Id" /><br />
+                    <span id="emailId"></span>
+                </div>
+                <div class="user-content">
+                    <label for="ffname">Father's Name<span> *</span></label><br>
+                    <input type="text" id="ffname" name="ffname" placeholder="First Name" />
+                    <input type="text" id="flname" name="flname" placeholder="Last Name" /><br />
+                    <span id="fatherError"></span>
+                </div>
+                <div class="user-content">
+                    <label for="mfname">Mother's Name<span> *</span></label><br>
+                    <input type="text" id="mfname" name="mfname" placeholder="First Name" />
+                    <input type="text" id="mlname" name="mlname" placeholder="Last Name" /><br />
+                    <span id="motherError"></span>
+                </div>
+                <div class="user-content">
+                    <label for="gender">Gender</label><span> *</span><br>
+                    <input type="radio" id="genderMale" value="Male" name="gender" />
+                    <label for="genderMale">Male</label><br>
+                    <input type="radio" id="genderFemale" value="Female" name="gender" />
+                    <label for="genderFemale">Female</label><br />
+                    <span id="genderErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="nationality">Nationality<span> *</span></label><br>
+                    <input type="text" id="nationality" name="nationality" placeholder="Nationality" /><br />
+                    <span id="nation"></span>
+                </div>
+                <div class="user-content">
+                    <label for="address">Home Address<span> *</span></label><br>
+                    <input type="text" id="homeAdd" name="homeAdd" placeholder="Street Address"><br>
+                    <input type="text" id="city" name="city" placeholder="City">
+                    <select id="country">
+                        <option>Select Country</option>
+                        <option value="Afghanistan">Afghanistan</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Bhutan">Bhutan</option>
+                        <option value="Canada">Canada</option>
+                        <option value="China">China</option>
+                        <option value="Denmark">Denmark</option>
+                        <option value="Egypt">Egypt</option>
+                        <option value="France">France</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Hong Kong">Hong Kong</option>
+                        <option value="India">India</option>
+                        <option value="Indonesia">Indonesia</option>
+                        <option value="New Zealand">New Zealand</option>
+                        <option value="Russia">Russia</option>
+                        <option value="South Africa">South Africa</option>
+                        <option value="Sri Lanka">Sri Lanka</option>
+                        <option value="Zimbabwe">Zimbabwe</option>
+                    </select><br />
+                    <span id="addressErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="homeNo">Telephone-Home</label><br>
+                    <input type="number" id="homeNo" placeholder="### ### ####" name="homeNo" />
+                </div>
+                <div class="user-content">
+                    <label for="mobileNo">Telephone-Mobile<span> *</span></label><br>
+                    <input type="number" id="mobileNo" placeholder="### ### ####" name="mobileNo" /><br />
+                    <span id="mobileNoErr"></span>
+                </div>
+                <div class="btn-container">
+                    <button type="button" class="save-button" onclick="saveBasicDetails()">Save-Next</button>
+                </div>
+            </form>
+        </div>
+        <div class="display-none" id="page-2">
+            <h3 class="page-head">Education Details Form</h3>
+            <form>
+                <div class="user-content">
+                    <label for="hscInstitue">HSC Institution name <span> *</span></label><br>
+                    <input type="text" id="hscInstitute" placeholder="HSC Institution name" /><br />
+                    <span id="hscInstErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="hscBoard">HSC Board<span> *</span></label><br>
+                    <select id="hscBoard">
+                        <option>Select Board</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="ICSC">ICSC</option>
+                        <option value="STATE BOARD">STATE BOARD</option>
+                    </select><br />
+                    <span id="hscBoardErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="hscPercentage">Score in HSC in Percentage<span> *</span></label><br>
+                    <input type="number" id="hscPercentage" placeholder="HSC in percentage" /><br />
+                    <span id="hscPerErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="sscInstitute">SSC Institution name <span> *</span></label><br />
+                    <input type="text" id="sscInstitu" placeholder="SSC Institution name" /><br />
+                    <span id="sscInstErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="sscBoard">SSC Board<span> *</span></label><br>
+                    <select id="sscBoard">
+                        <option>Select Board</option>
+                        <option value="CBSE">CBSE</option>
+                        <option value="ICSC">ICSC</option>
+                        <option value="STATE BOARD">STATE BOARD</option>
+                    </select><br />
+                    <span id="sscBoardErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="sscPercentage">Score in SSC in Percentage<span> *</span></label><br />
+                    <input type="number" id="sscPercentage" placeholder="HSC in percentage" /><br />
+                    <span id="sscPerErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="currentPurse">Currently Pursuing<span> *</span></label><br />
+                    <input type="text" id="currentPurse" placeholder="Currently pursuing" /><br />
+                    <span id="currPurErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="currentEdu">Current educational institution name<span> *</span></label><br />
+                    <input type="text" id="currentEdu" placeholder="Current educational institution name" /><br />
+                    <span id="currEduErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="overallPercentage">Overall Percentage<span> *</span></label><br />
+                    <input type="number" id="overallPercentage" placeholder="Overall percentage" /><br />
+                    <span id="overPerErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="backlogs">Current backlogs if any</label><br>
+                    <input type="number" id="backlogs" placeholder="Current backlogs if any" />
+                </div>
+                <div class="button-container">
+                    <button type="button" class="back-button" onclick="backToPage1()">Back</button>
+                    <button type="button" class="save-button" onclick="saveEducationaDetails()">Save-Next</button>
+                </div>
+            </form>
+        </div>
+        <div class="display-none" id="page-3">
+            <h3 class="page-head">Document Details Form</h3>
+            <form>
+                <div class="user-content">
+                    <label for="photograph">Recent Passportsize-Photograph:<span> *</span></label>
+                    <div class="file-content">
+                        <p class="file-style">Browse a Photo : </p>
+                        <input type="file" id="photograph" accept="image/*" />
+                    </div>
+                    <span id="photoErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="hscFile">HSC Marks Sheet:<span> *</span></label>
+                    <div class="file-content">
+                        <p class="file-style">Browse HSC Marks Sheet : </p>
+                        <input type="file" id="hscFile" accept="image/*, .pdf, .doc" />
+                    </div>
+                    <span id="hscFileErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="sscFile">SSC Marks Sheet:<span> *</span></label>
+                    <div class="file-content">
+                        <p class="file-style">Browse SSC Marks Sheet : </p>
+                        <input type="file" id="sscFile" accept="image/*, .pdf, .doc" />
+                    </div>
+                    <span id="sscFileErr"></span>
+                </div>
+                <div class="user-content">
+                    <label for="allSem">All semesters mark sheet in a single PDF or Docs:<span> *</span></label>
+                    <div class="file-content">
+                        <p class="file-style">Browse All semester Marks Sheets : </p>
+                        <input type="file" id="allSem" accept="image/*, .pdf, .doc" />
+                    </div>
+                    <span id="allSemErr"></span>
+                </div>
+                <div class="button-container">
+                    <button type="button" class="back-button" onclick="backToPage2()">Back</button>
+                    <button type="button" class="save-button" onclick="saveAndRegister()">Save-Next</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
