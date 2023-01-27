@@ -2,17 +2,6 @@ let page1El = document.getElementById("page-1");
 let page2El = document.getElementById("page-2");
 let page3El = document.getElementById("page-3");
 
-function changePage2() {
-    page2El.classList.add("display-none");
-    page3El.classList.remove("display-none");
-    page3El.classList.add("display");
-}
-
-function changePage1() {
-    page1El.classList.add("display-none");
-    page2El.classList.remove("display-none");
-    page2El.classList.add("display");
-}
 
 function saveBasicDetails() {
     let name = document.getElementById("name").value;
