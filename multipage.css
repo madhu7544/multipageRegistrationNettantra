@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    background-color: lightblue;
+    background-size: cover;
+}
+
+.header-container {
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #036e63;
+    padding-top: 20px;
+    text-decoration: underline;
+}
+
+.logo {
+    width: 200px;
+}
+
+.page-head {
+    text-align: center;
+    font-family: "Roboto";
+    font-weight: bold;
+    color: #036e63;
+}
+
+.display {
+    background-color: rgba(235, 237, 241, 0.6);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    color: red;
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+
+}
+
+label {
+    font-family: "Roboto";
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+
+
+#name,
+#lastname,
+#ffname,
+#flname,
+#mfname,
+#mlname,
+#city,
+#country {
+    width: 300px;
+    height: 30px;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-family: "Roboto";
+    font-size: 12px;
+    padding: 4px;
+}
+
+#date,
+#email,
+#nationality,
+#homeAdd,
+#homeNo,
+#mobileNo,
+#hscInstitute,
+#hscBoard,
+#hscPercentage,
+#sscInstitu,
+#sscBoard,
+#sscPercentage,
+#currentPurse,
+#currentEdu,
+#overallPercentage,
+#backlogs {
+    width: 606px;
+    height: 30px;
+    font-family: "Roboto";
+    font-size: 12px;
+    padding: 4px;
+}
+
+@media screen and (max-width:900px) {
+
+    #date,
+    #email,
+    #nationality,
+    #homeAdd,
+    #homeNo,
+    #mobileNo,
+    #hscInstitute,
+    #hscBoard,
+    #hscPercentage,
+    #sscInstitu,
+    #sscBoard,
+    #sscPercentage,
+    #currentPurse,
+    #currentEdu,
+    #overallPercentage,
+    #backlogs {
+        width: 300px;
+        height: 30px;
+    }
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+
+.save-button {
+    background-color: blue;
+    border: solid 1px blue;
+    border-radius: 5px;
+    width: 100px;
+    height: 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.back-button {
+    background-color: grey;
+    border: solid 1px grey;
+    border-radius: 5px;
+    width: 100px;
+    color: white;
+    cursor: pointer;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.display-none {
+    display: none;
+    height: 100vh;
+}
+
+.document-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.file-style {
+    color: #494d52;
+    font-family: "Roboto";
+    font-weight: 600;
+    padding-right: 10px;
+    font-size: 14px;
+}
+
+#photograph,
+#hscFile,
+#sscFile,
+#allSem {
+    width: 300px;
+    height: 40px;
+    font-family: "Roboto";
+    font-size: 12px;
+    margin-top: 0px;
+}
+
+.file-content {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 0px;
+}
+
+.user-content {
+    margin-top: 10px;
+}
