@@ -240,7 +240,7 @@ function saveAndRegister() {
     if (allSem.value === "") {
         allSemErr.textContent = "Choose All Semesters Marks in Single File";
     } else if (allSemSize.size >= 10000000) {
-        allSemErr.textContent = "File size must be less than 10MB!";
+        allSemErr.textContent = "File size must be less than 10MB! ";
     } else {
         allSemErr.textContent = "";
         allSemName = allSemSize.name;
