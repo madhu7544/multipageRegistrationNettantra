@@ -2,7 +2,6 @@ let page1El = document.getElementById("page-1");
 let page2El = document.getElementById("page-2");
 let page3El = document.getElementById("page-3");
 
-
 function saveBasicDetails() {
     let name = document.getElementById("name").value;
     let lastname = document.getElementById("lastname").value;
@@ -256,7 +255,7 @@ function saveAndRegister() {
 
 
     if ((photograph.value && hscFile.value && sscFile.value && allSem.value !== "") && (photoSize.size && hscFileSize.size && sscFileSize.size && allSemSize.size <= 4000000)) {
-        alert("Successfully Register");
+        alert("Successfully Registered");
         localStorage.setItem("documets_files", JSON.stringify(documentsFiles));
         page1El.classList.remove("display-none");
         page2El.classList.add("display-none");
